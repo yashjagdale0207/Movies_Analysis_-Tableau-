@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Analysis Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #vizContainer {
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Movies Analysis Dashboard</h1>
+    </header>
+
+    <div id="vizContainer"></div>
+
+    <div class="controls">
+        <button id="exportPDF" class="btn">Generate PDF</button>
+        <button id="exportImage" class="btn">Generate Image</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Movies Analysis Dashboard</p>
+    </footer>
+
+    <script>
+        console.log('Is this working?');
+
+        let viz;
+        
+        const url = "https://public.tableau.com/shared/8H5DC6NRC?:display_count=n&:origin=viz_share_link";
+        const vizContainer = document.getElementById('vizContainer');
+        const options = {
+            hideTabs: true,
+            height: 1000,
+            width: 1200,
+            onFirstInteraction: function () {
+                workbook = viz.getWorkbook();
+                activeSheet = workbook.getActiveSheet();
+                console.log("My dashboard is interactive");
+            }
+        };
+        
+        function initViz() {
+            console.log('Executing the initViz function!');
+            viz = new tableau.Viz(vizContainer, url, options);
+        }
+        
+        document.addEventListener("DOMContentLoaded", initViz);
+        
+        const exportPDF = document.getElementById('exportPDF');
+        const exportImage = document.getElementById('exportImage');
+        
+        function generatePDF() {
+            viz.showExportPDFDialog();
+        }
+        
+        exportPDF.addEventListener("click", generatePDF);
+        
+        function generateImage() {
+            viz.showExportImageDialog();
+        }
+        
+        exportImage.addEventListener("click", generateImage);
+    </script>
+</body>
+</html>
