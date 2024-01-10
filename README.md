@@ -1,6 +1,7 @@
 # movies-analysis
 **Executive Summary: Movie Analysis Dashboard**https://yashjagdale0207.github.io/movies-analysis/
-![Dashboard 1](https://github.com/yashjagdale0207/movies-analysis/assets/145290827/df4eda45-8a58-47ab-8d8d-beb60a197d40)
+![Dashboard 1](https://github.com/yashjagdale0207/movies-analysis/assets/145290827/56cdd8d6-324d-4ca5-83c4-b4d27035f11f)
+
 
 **Objective:**
 The Tableau project aims to provide comprehensive insights into the top movies across different genres, including their ratings, popularity, and financial performance. The analysis covers genres such as Action, Crime, Animation, Adventure, Biography, Drama, Comedy, and more.
