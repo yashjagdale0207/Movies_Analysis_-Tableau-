@@ -1,4 +1,4 @@
-# movies-analysis
+# Movies_Analysis_(Tableau)
 **Executive Summary: Movie Analysis Dashboard**https://yashjagdale0207.github.io/movies-analysis/
 ![Dashboard 1](https://github.com/yashjagdale0207/movies-analysis/assets/145290827/56cdd8d6-324d-4ca5-83c4-b4d27035f11f)
 
