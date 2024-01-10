@@ -1,5 +1,5 @@
 # movies-analysis
-**Executive Summary: Movie Analysis Dashboard**![Movie Analysis Dashboard](https://yashjagdale0207.github.io/movies-analysis/)
+**Executive Summary: Movie Analysis Dashboard**https://yashjagdale0207.github.io/movies-analysis/
 ![Dashboard 1](https://github.com/yashjagdale0207/movies-analysis/assets/145290827/df4eda45-8a58-47ab-8d8d-beb60a197d40)
 
 **Objective:**
